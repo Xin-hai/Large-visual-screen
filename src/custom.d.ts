@@ -1,4 +1,6 @@
 declare module "*.png" {
-    const value any;
+    const value
+    let any;
+    any;
     export default value;
 }

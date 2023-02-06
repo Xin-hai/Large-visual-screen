@@ -1,8 +1,9 @@
 import React, {useEffect, useRef} from 'react';
 import * as echarts from "echarts";
 import {createEchartsOptions} from "../shared/create-echarts-options";
-import { baseEchartOptions } from '../shared/base-echart-options';
-import { px } from '../shared/px';
+import {baseEchartOptions} from "../shared/base-echart-options";
+import {px} from "../shared/px";
+
 
 export const Chart2 = () => {
   const divRef = useRef(null)
@@ -29,7 +30,7 @@ export const Chart2 = () => {
         {
           name: '2011年',
           type: 'bar',
-          data: [1,2,3,4,5,6,,7,8,9],
+          data: [2,5,4,7,8,9,3,1,6],
           itemStyle:{
             normal: {
               color: new echarts.graphic.LinearGradient(0,0,1,0, [{
@@ -46,7 +47,7 @@ export const Chart2 = () => {
         {
           name: '2012年',
           type: 'bar',
-          data: [2,3,4,5,6,7,8,9,10],
+          data: [8,1,6,2,3,4,5,7,9],
           itemStyle:{
             normal: {
               color: new echarts.graphic.LinearGradient(0,0,1,0, [{

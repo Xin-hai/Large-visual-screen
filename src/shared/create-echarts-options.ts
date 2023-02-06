@@ -12,9 +12,10 @@ export const createEchartsOptions = (options) => {
     result.xAxis.axisLabel.fontSize = px(12);
   }
   if(!(options?.yAxis?.axisLabel?.fontSize)) {
-    result.yAxis = result.xAxis || {};
-    result.yAxis.axisLabel = result.xAxis.axisLabel || {};
+    result.yAxis = result.yAxis || {};
+    result.yAxis.axisLabel = result.yAxis.axisLabel || {};
     result.yAxis.axisLabel.fontSize = px(12);
+    // 开始遇到问题，将yAxis不小心写为xAxis，导致Chart2和Chart3图形显示永不成功，经过4个小时查错，最终找到。
   }
   return result;
 }

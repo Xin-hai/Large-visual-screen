@@ -7,7 +7,7 @@ import {createEchartsOptions} from "../shared/create-echarts-options";
 export const Chart1 = () => {
   const divRef = useRef(null)
   useEffect(() => {
-    var myChart = echarts.init(divRef.current);
+    let myChart = echarts.init(divRef.current);
     myChart.setOption(createEchartsOptions({
      ...baseEchartOptions,
       xAxis: {
@@ -17,7 +17,7 @@ export const Chart1 = () => {
           lineStyle: {color: '#083B70'}
         },
         axisLabel: {
-          fontSize: px(12),
+
           formatter(val){
             if(val.length > 2){
               const array = val.split('');
@@ -46,7 +46,8 @@ export const Chart1 = () => {
       ]
     }))
   },[])
-  return(
+
+  return (
   <div className="bordered 管辖统计">
     <h2>案发派出所管辖统计</h2>
     <div ref={divRef} className="chart">
