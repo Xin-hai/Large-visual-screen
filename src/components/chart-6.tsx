@@ -1,6 +1,5 @@
 import React, {useEffect, useRef} from 'react';
 import * as echarts from "echarts";
-import {px} from "../shared/px";
 import {createEchartsOptions} from "../shared/create-echarts-options";
 import china from '../geo/china.json'
 

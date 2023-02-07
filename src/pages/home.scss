@@ -84,14 +84,33 @@
     }
     .section5 {
       grid-area: box5;
-    }
+      .section5 {
+        grid-area: box5;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .row1 {
+          height: px(371);
+        }
+        .row2 {
+          height: px(371);
+        }
+        .row3  {
+          height: px(455);
+        }
+      }
+      }
     .管辖统计,
     .破获排名,
     .发案趋势,
     .案发时段,
     .往年战果,
     .籍贯,
-    .年龄段 {
+    .年龄段,
+    .案发类型,
+    .案发街道,
+    .作案手段{
       height: px(315);
       display: flex;
       flex-direction: column;
@@ -105,6 +124,11 @@
         line-height: px(24);
         padding: px(10) px(28);
         text-shadow: 0 0 px(3) white;
+      }
+      .charts {
+        width: 100%;
+        flex: 1;
+        display: flex;
       }
       .chart {
         flex: 1;
@@ -146,9 +170,14 @@
     .发案趋势, .案发时段 {
       height: px(363);
     }
-    .往年战果 {
+    .chart12{flex:1;display: flex;flex-direction: column;}
+
+    .往年战果,.作案手段 {
+      padding: 0 px(24);
       table {
-        margin-top: px(38);
+        width: 100%;
+        table-layout: fixed;
+        margin-top: px(25);
         border-collapse: collapse;
         th, td {
           border: 1px solid #1a3671;
@@ -161,20 +190,27 @@
         tbody {
           td{
             height: px(50);
-            width: px(90);
+            width: px(84);
             background: #1c2456;
           }
         }
       }
     }
+    .作案手段 {
+      table {
+        tbody {
+          td {
+            height: px(26);
+          }
+        }
+      }
+    }
+
     .年龄段 {
       display: flex;
       flex-direction: column;
       height: px(363);
       .charts {
-        width: 100%;
-        flex: 1;
-        display: flex;
         padding: px(30);
       }
       &-图1, &-图2, &-图3 {
@@ -189,6 +225,7 @@
           align-items: center;
           justify-content: center;
           flex-wrap: wrap;
+          padding-right: px(10);
           span {
             display: inline-block;
             width: px(16);
