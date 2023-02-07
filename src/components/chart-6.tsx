@@ -72,9 +72,9 @@ export const Chart6 = () =>{
       <div className="wrapper">
         <div ref={divRef} className="chart"/>
         <div className="legend bordered">
-          <span className="icon" style={{background: colors['甘肃省']}}/>甘肃籍
-          <span className="icon" style={{background: colors['四川省']}}/>四川籍
-          <span className="icon" style={{background: colors['青海省']}}/>青海籍
+          <span className="icon" style={{background: colors['甘肃省']}}/>天寒籍
+          <span className="icon" style={{background: colors['四川省']}}/>紫川籍
+          <span className="icon" style={{background: colors['青海省']}}/>流沙籍
       </div>
       <div className="notes">
         该地图仅显示中国部分区域，特此注明。
