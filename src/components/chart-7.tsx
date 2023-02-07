@@ -28,7 +28,8 @@ export const Chart7 = () => {
               position: 'inside',
               textStyle: {color:'white', fontSize: px(20)},
               formatter(options) {
-                return options.value * 100 +'%'
+                return (options.value * 100).toFixed(0) +'%'
+                // 取整，加百分号
               }
             },
             labelLine: {
