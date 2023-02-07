@@ -46,7 +46,7 @@
       border-radius: 4px;
       position: relative;
       box-shadow: 0 0 2px 0 #0f3361, inset 0 0 2px 0 #0f3361;
-      background: #0c1139;
+      background: #0f113a;
       &::before {
         content: "";
         position: absolute;
@@ -68,19 +68,30 @@
     }
     .section2 {
       grid-area: box2;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
     }
     .section3 {
       grid-area: box3;
     }
     .section4 {
       grid-area: box4;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
     .section5 {
       grid-area: box5;
     }
     .管辖统计,
     .破获排名,
-    .发案趋势 {
+    .发案趋势,
+    .案发时段,
+    .往年战果,
+    .籍贯,
+    .年龄段 {
       height: px(315);
       display: flex;
       flex-direction: column;
@@ -129,6 +140,106 @@
             rgba(185, 42, 232, 1) 0%,
             rgba(103, 115, 231, 1) 100%
           );
+        }
+      }
+    }
+    .发案趋势, .案发时段 {
+      height: px(363);
+    }
+    .往年战果 {
+      table {
+        margin-top: px(38);
+        border-collapse: collapse;
+        th, td {
+          border: 1px solid #1a3671;
+        }
+        thead{
+          th {
+          height: px(70);
+          box-shadow: inset 0 0 px(60) 0 #1f3d85;
+        }}
+        tbody {
+          td{
+            height: px(50);
+            width: px(90);
+            background: #1c2456;
+          }
+        }
+      }
+    }
+    .年龄段 {
+      display: flex;
+      flex-direction: column;
+      height: px(363);
+      .charts {
+        width: 100%;
+        flex: 1;
+        display: flex;
+        padding: px(30);
+      }
+      &-图1, &-图2, &-图3 {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+      }
+      &-图1 {
+        .legend{
+          height: px(40);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          span {
+            display: inline-block;
+            width: px(40);
+            height: px(20);
+            border-radius: px(4);
+            margin: 0 px(10);}
+            .male {background: #33a4fa}
+            .female {background: #8d70f8}
+          }
+          .chart {
+            position: relative;
+            display: flex;
+            .main {flex: 1}
+            .text {position: absolute;top: 50%;left:50%;transform: translate(-50%,-50%);
+            color: #33a4fa; font-size: px(40);text-shadow: 0 0 px(20) #33a4fa; font-weight: bold;};
+          }
+        }
+      }
+
+    .籍贯 {
+      height: px(753);
+      background: transparent;
+      .wrapper {
+        position: relative;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        .chart {flex: 1}
+        .legend {
+          position: absolute;
+          display: flex;
+          align-items: center;
+          top: px(40);
+          left: px(20);
+          font-size: px(22);
+          padding: px(20) px(10) px(20) 0;
+          border-radius: 0;
+          .icon {
+            margin: 0 px(10);
+            display: inline-block;
+            width: px(16);
+            height: px(16);
+            border-radius: 50%;
+            background: #1cecd9;
+          }
+        }
+        .notes {
+          position: absolute;
+          bottom: px(10);
+          left: 50%;
+          transform: translate(-50%, -50%);
         }
       }
     }
